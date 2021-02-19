@@ -6,7 +6,7 @@ import torch
 ####################################
 ### !!!!! Define args here !!!!! ###
 ####################################
-def my_parse_args_pathomic(): #For MMMT
+def my_parse_args_pathomic(): #For MultiCoFusion
     parser = argparse.ArgumentParser()
     parser.add_argument('--dataroot', default='./data/TCGA_GBMLGG', help="datasets")
     parser.add_argument('--checkpoints_dir', type=str, default='./checkpoints/TCGA_GBMLGG', help='models are saved here')
