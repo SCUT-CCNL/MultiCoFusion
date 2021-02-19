@@ -2,7 +2,7 @@
  
 Run 'train_cv.py'
 
-Files in /checkpoints and /data will be uploaded later.
+Files in **/checkpoints** and **/data** will be uploaded later.
 
 ## Acknowledgments
 
