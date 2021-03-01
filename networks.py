@@ -45,7 +45,7 @@ def define_net(opt, k):
         net = GSNN(input_dim=opt.input_size_omic, omic_dim=opt.omic_dim, dropout_rate=opt.dropout_rate, act_1=act_1, act_2=act_2, label_dim_1=opt.label_dim_1, label_dim_2=opt.label_dim_2, init_max=init_max)
     elif opt.mode == "omic_sgcn":
         net = SGCN(input_dim=opt.input_size_omic, omic_dim=opt.omic_dim, dropout_rate=opt.dropout_rate, act_1=act_1, act_2=act_2, label_dim_1=opt.label_dim_1, label_dim_2=opt.label_dim_2, init_max=init_max)
-    elif opt.mode == "pathomic":
+    elif opt.mode == "pathomic": # MultiCoFusion
         net = PathomicNet(opt=opt, act_1=act_1, act_2=act_2, k=k)
     elif opt.mode == "multimodalprognosis":
         net = MultimodalPrognosis()
@@ -486,7 +486,7 @@ def get_resnet(act_1=None, act_2=None, label_dim_1=1, label_dim_2=1, pretrained=
 
 
 ##############################################################################
-# Path + Omic
+# Path + Omic （MultiCoFusion）
 ##############################################################################
 class PathomicNet(nn.Module):
     def __init__(self, opt, act_1, act_2, k):
