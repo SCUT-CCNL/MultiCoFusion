@@ -1,0 +1,3 @@
+MultiCoFusion: pathomic_resnet_sgcn_surv_grad_JT
+
+Pathomic Fusion: pathgraphomic_grad
